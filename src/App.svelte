@@ -12,9 +12,9 @@ import Results from "./lib/Results.svelte";
 <Header></Header>
 
 {#if $CurrentWorkout?.Completed}
-    <Workout></Workout>
-{:else if $CurrentWorkout}
     <Results></Results>
+{:else if $CurrentWorkout}
+    <Workout></Workout>
 {:else}
     <Overview></Overview>
 {/if}
