@@ -1,9 +1,9 @@
 import { Question, CreateQuestion } from "./Question"
 
 export class Workout{
-    public Questions: Question[]
+    constructor (public Questions: Question[]){}
     public CompletedAt: Date
-    public Comleted: boolean
+    public Completed: boolean
 }
 
 export function CreateWorkout(questionCount:number): Workout{
@@ -11,5 +11,6 @@ export function CreateWorkout(questionCount:number): Workout{
     for (let index = 0; index < questionCount; index++) {
         questions.push(CreateQuestion(1))        
     }
+    return new Workout(questions)
 }
 
