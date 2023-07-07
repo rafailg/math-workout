@@ -10,7 +10,6 @@ import Results from "./lib/Results.svelte";
 <main>
 
 <Header></Header>
-
 {#if $CurrentWorkout?.Completed}
     <Results></Results>
 {:else if $CurrentWorkout}
