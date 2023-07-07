@@ -32,15 +32,25 @@
 </script>
 
 <div>
-    <div>
-        <h4>Workouts: {totalWorkouts}</h4>
-        <h4>Sets: {totalSets}</h4>
-        <h4>Questions: {totalQuestions}</h4>
-        <h4>Average Speed: {averageSpeed || 0}</h4>
-        <h4>Completion Rate: {completionRate || 0}%</h4>
-
-        <button on:click={startWorkout}>Start new workout</button>
+    <div class="m-5">
+        <div class="box is-inline-block">
+            <h4>Workouts: {totalWorkouts}</h4>
+            <h4>Sets: {totalSets}</h4>
+            <h4>Questions: {totalQuestions}</h4>
+            <h4>Average Speed: {averageSpeed || 0}</h4>
+            <h4>Completion Rate: {completionRate || 0}%</h4>
+        </div>
     </div>
+
+
+    <div class="is-flex is-justify-content-center">
+        <button
+        class="button is-primary m-5" 
+        on:click={startWorkout}>
+        Start new workout
+    </button>
+    </div>
+
 </div>
 
 <style>

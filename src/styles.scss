@@ -1,0 +1,12 @@
+html, body, #app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+$primary: #ac1ab1;
+$danger: #a70e2c;
+
+$family-primary: 'Open Sans', sans-serif;
+
+@import 'bulma/bulma.sass';

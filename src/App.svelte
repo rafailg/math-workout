@@ -20,6 +20,8 @@ import Results from "./lib/Results.svelte";
 
 </main>
 
-<style>
-
+<style>  
+  main {
+    height: 100%;
+  }
 </style>

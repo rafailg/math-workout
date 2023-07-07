@@ -1,16 +1,32 @@
 <script lang="ts">
     import { CurrentWorkout } from "../stores/stores";
-    
-    function completeWorkout(){
-        CurrentWorkout.set(null)
-    }
 </script>
 
 <div>
     {#if $CurrentWorkout}
-        {#each $CurrentWorkout.Questions as question, i}
-            <div>{i+1} {question.Solved?"Solved":"Failed"} - {question.Description} = {question.Answer}</div>
-        {/each}        
+        <div class="box is-inline-block m-5">
+            <div class="is-size-3 mb-5">Results</div>
+
+            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                    <th>Question</th>
+                    <th>Status</th>
+                    <th>Prompt</th>
+                    <th>Response</th>
+                    <th>Time(seconds)</th>
+                </thead>
+                <tbody>
+                    {#each $CurrentWorkout.Questions as question, i}
+                    <tr>
+                        <td>{i+1}</td>
+                        <td>{question.Solved?"Solved":"Failed"}</td>
+                        <td>{question.Description}</td>
+                        <td>{question.Answer}</td>
+                        <td>{question.CompletedIn}</td>
+                    </tr>
+                    {/each} 
+                </tbody>
+            </table>
+        </div>
     {/if}
-    <button on:click={completeWorkout}>Back to menu</button>
 </div>

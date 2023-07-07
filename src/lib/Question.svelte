@@ -37,24 +37,35 @@
 
 <div>
     {#if currentQuestion}
-        <h2
-        class={solved?"solved":""}>
-            {currentQuestion.Description}
-        </h2>
-        
-        <input 
-        type="text" 
-        bind:this={inputElement}
-        bind:value={userAnswer} 
-        on:input={checkAnswer}
-        inputmode="numeric" 
-        disabled={solved} 
-        class={solved?"solved":""}>
+        <div class="box is-inline-block has-text-centered 
+        {solved?"has-background-success has-text-white":""}">
+            <div
+            class="is-size-3">
+                {currentQuestion.Description}
+            </div>
+            
+            <input 
+            type="text" 
+            bind:this={inputElement}
+            bind:value={userAnswer} 
+            on:input={checkAnswer}
+            inputmode="numeric" 
+            disabled={solved} 
+            class="is-size-3 is-text-weight-bold answer-input">
+        </div>
     {/if}
 </div>
 
 <style>
-    .solved{
-        color: green;
+    .answer-input{
+        border: none;
+        outline: none;
     }
+
+    .box input:disabled {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    opacity: 1;
+  }
 </style>
