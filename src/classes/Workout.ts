@@ -9,7 +9,7 @@ export class Workout{
 export function CreateWorkout(questionCount:number): Workout{
     let questions: Question[] = [];
     for (let index = 0; index < questionCount; index++) {
-        questions.push(CreateQuestion(1))        
+        questions.push(CreateQuestion(2))        
     }
     return new Workout(questions)
 }

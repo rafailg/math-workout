@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { onMount, afterUpdate } from "svelte";
+    import { afterUpdate } from "svelte";
     import { Question } from "../classes/Question";
     export let moveToNextQuestion = () => {}
 
     export let currentQuestion: Question = null;
     let userAnswer:string;
-    let startTime: Date = new Date();
+    let startTimestamp: number = new Date().getTime();
     const delay = 1000
     let inputElement: HTMLInputElement;
     let disableInput = false
@@ -25,11 +25,12 @@
             //Move to next question or end workout after a period of time.
             setTimeout(()=>{
                 currentQuestion.Solved = true;
-                currentQuestion.CompletedIn = new Date().getSeconds() - startTime.getSeconds()
+                currentQuestion.CompletedIn = Math.round((new Date().getTime() - startTimestamp) / 10) / 100
                 userAnswer = ""
                 disableInput = false;
                 solved = false;
                 moveToNextQuestion()
+                startTimestamp = new Date().getTime()
             },delay)
         }
     }

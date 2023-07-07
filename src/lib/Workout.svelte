@@ -30,9 +30,9 @@
 <div>
     <div class="is-flex is-justify-content-center">
         <div>
-            <div class="has-text-centered mb-5">
-                <h3>Workout</h3>
-                <h4>Question {questionIndex + 1} out of {workout.Questions.length}</h4>            
+            <div class="has-text-centered m-5">
+                <h3 class="is-size-4">Workout</h3>
+                <h4 class="has-text-weight-bold">Question {questionIndex + 1} out of {workout.Questions.length}</h4>            
             </div>
 
             <QuestionComponent bind:currentQuestion={currentQuestion} moveToNextQuestion={moveToNextQuestion} ></QuestionComponent>
