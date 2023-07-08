@@ -39,7 +39,7 @@
 <div>
     {#if currentQuestion}
         <div class="box is-inline-block has-text-centered 
-        {solved?"has-background-success has-text-white":""}">
+        {solved?"solved":""}">
             <div
             class="is-size-3">
                 {currentQuestion.Description}
@@ -61,6 +61,13 @@
     .answer-input{
         border: none;
         outline: none;
+    }
+
+    .solved{
+        color: white;
+        background: rgb(14,217,157);
+background: radial-gradient(circle, rgba(14,217,157,1) 0%, rgba(54,231,179,1) 100%);
+        transition:ease-in-out 100ms
     }
 
     .box input:disabled {

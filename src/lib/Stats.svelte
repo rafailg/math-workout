@@ -2,7 +2,6 @@
     import { Workouts } from "../stores/stores";
 
     let totalWorkouts = 0;
-    let totalSets = 0;
     let totalQuestions = 0;
     let averageSpeed = 0;
     let completionRate = 0;
@@ -28,7 +27,6 @@
 <div class="m-5 box is-inline-block">
     <div class="is-size-5 mb-2">Performance 📊</div>
     <h4>Workouts: {totalWorkouts}</h4>
-    <h4>Sets: {totalSets}</h4>
     <h4>Questions: {totalQuestions}</h4>
     <h4>Average Speed: {averageSpeed || 0}</h4>
     <h4>Completion Rate: {completionRate || 0}%</h4>
