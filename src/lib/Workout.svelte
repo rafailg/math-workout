@@ -10,13 +10,11 @@
         if(currentWorkout){
             workout = currentWorkout;
             questionIndex = 0;
-            console.log("Setting current workout question")
             currentQuestion = workout.Questions[questionIndex]
         }
     })
 
     function moveToNextQuestion(){
-        console.log("Moving to next question")
         if(questionIndex < workout.Questions.length - 1){
             questionIndex++;
             currentQuestion = workout.Questions[questionIndex]

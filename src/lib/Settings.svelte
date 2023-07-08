@@ -3,7 +3,7 @@ import { AmountOfQuestions, AmountOfNumbers, NumberLength } from "../stores/stor
 </script>
 
 <div class="m-5 box is-inline-block" style="max-width: 20rem;">
-    <div class="is-size-5 mb-2">Settings</div>
+    <div class="is-size-5 mb-2">Settings ⚙️</div>
     <label for="amountofquestions">Questions per workout</label>
     <input  bind:value={$AmountOfQuestions} id="amountofquestions" class="input" type="number" placeholder="Questions per workout" min="5" max="100">
     <label for="amountofnumbers">Parts</label>

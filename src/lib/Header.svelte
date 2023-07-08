@@ -9,7 +9,7 @@
 <nav class="navbar" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item brand-name">
-            Math Workout
+            Math Workout ➗
         </div>
     </div>
 

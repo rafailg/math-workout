@@ -5,7 +5,7 @@
 <div>
     {#if $CurrentWorkout}
         <div class="box is-inline-block m-5">
-            <div class="is-size-3 mb-5">Results</div>
+            <div class="is-size-3 mb-5">Results 💯</div>
 
             <table class="table is-bordered is-striped is-narrow is-hoverable">
                 <thead>

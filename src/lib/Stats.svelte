@@ -26,7 +26,7 @@
 </script>
 
 <div class="m-5 box is-inline-block">
-    <div class="is-size-5 mb-2">Performance</div>
+    <div class="is-size-5 mb-2">Performance 📊</div>
     <h4>Workouts: {totalWorkouts}</h4>
     <h4>Sets: {totalSets}</h4>
     <h4>Questions: {totalQuestions}</h4>
