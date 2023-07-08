@@ -6,19 +6,19 @@ export class Question{
     public CompletedIn: number
 }
 
-export function CreateQuestion(difficulty: number): Question{
-    let description = GetOperationString(difficulty)
+export function CreateQuestion(operationCount: number, numberSize:number): Question{
+    let description = GetOperationString(operationCount, numberSize)
     let answer = GetOperationAnswer(description)
     let question = new Question(description, answer)
     return question
 }
 
-function GetOperationString(amountOfNumbers: number): string{
+function GetOperationString(operationCount:number, numberSize:number): string{
     var characters: string[] = []
 
-    for(let i = 0; i < amountOfNumbers; i++){
-        characters.push(GetRandomNumber(amountOfNumbers).toString())
-        if(i != amountOfNumbers - 1){
+    for(let i = 0; i < operationCount; i++){
+        characters.push(GetRandomNumber(numberSize).toString())
+        if(i != operationCount - 1){
             characters.push(GetRandomOperator())
         }
     }
@@ -39,5 +39,7 @@ function GetRandomOperator(){
 //}
 
 function GetRandomNumber(digits: number){
-    return Math.ceil(Math.random() * (10 * digits))
+    var number = Math.ceil(Math.random() * (10 * digits));
+    if(number.toString().length > digits) number--;
+    return number
 }

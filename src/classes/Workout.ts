@@ -6,10 +6,10 @@ export class Workout{
     public Completed: boolean
 }
 
-export function CreateWorkout(questionCount:number): Workout{
+export function CreateWorkout(questionCount:number,operationCount:number, numberSize:number): Workout{
     let questions: Question[] = [];
     for (let index = 0; index < questionCount; index++) {
-        questions.push(CreateQuestion(3))        
+        questions.push(CreateQuestion(operationCount, numberSize))        
     }
     return new Workout(questions)
 }
