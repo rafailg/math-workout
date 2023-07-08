@@ -13,11 +13,12 @@ export function CreateQuestion(operationCount: number, numberSize:number): Quest
     return question
 }
 
-function GetOperationString(operationCount:number, numberSize:number): string{
+function GetOperationString(operationCount:number, maxDigits:number): string{
     var characters: string[] = []
 
     for(let i = 0; i < operationCount; i++){
-        characters.push(GetRandomNumber(numberSize).toString())
+        var digits = Math.ceil(Math.random() * maxDigits) 
+        characters.push(GetRandomNumber(digits).toString())
         if(i != operationCount - 1){
             characters.push(GetRandomOperator())
         }
@@ -38,8 +39,11 @@ function GetRandomOperator(){
 //
 //}
 
-function GetRandomNumber(digits: number){
-    var number = Math.ceil(Math.random() * (10 * digits));
-    if(number.toString().length > digits) number--;
-    return number
+function GetRandomNumber(maxDigits: number): number {
+    const maxValue = Math.pow(10, maxDigits) - 1;
+    let randomNumber = Math.ceil(Math.random() * maxValue);
+    while(randomNumber.toString().length < maxDigits){
+        randomNumber = GetRandomNumber(maxDigits);
+    }
+    return randomNumber;
 }

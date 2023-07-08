@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { CurrentWorkout, AmountOfNumbers, NumberLength } from "../stores/stores";
+    import { CurrentWorkout, AmountOfQuestions, AmountOfNumbers, NumberLength } from "../stores/stores";
     import { Workout, CreateWorkout } from "../classes/Workout";
     import Stats from "./Stats.svelte";
     import Settings from "./Settings.svelte";
 
     function startWorkout() {
-        let workout: Workout = CreateWorkout(10, $AmountOfNumbers, $NumberLength);
+        let workout: Workout = CreateWorkout($AmountOfQuestions, $AmountOfNumbers, $NumberLength);
         CurrentWorkout.set(workout);
     }
 </script>
