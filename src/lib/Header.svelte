@@ -1,6 +1,6 @@
 <script lang="ts">
     import { CurrentWorkout } from "../stores/stores";
-
+    import { StartNewWorkout } from "../classes/AppFlow";
     function toMainScreen(){
         CurrentWorkout.set(null);
     }
@@ -21,7 +21,10 @@
                     {$CurrentWorkout.Completed?"is-primary":"is-danger"}">
                         {$CurrentWorkout.Completed?"Continue":"Cancel workout"}
                     </button>
+                {:else}
+                    <button on:click={StartNewWorkout} class="button is-primary">Start new workout</button>
                 {/if}
+
             </div>
         </div>
     </div>
