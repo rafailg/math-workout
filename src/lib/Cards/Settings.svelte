@@ -1,5 +1,5 @@
 <script lang="ts">
-import { AmountOfQuestions, AmountOfNumbers, NumberLength } from "../stores/stores";
+import { AmountOfQuestions, AmountOfNumbers, NumberLength } from "../../stores/stores";
 </script>
 
 <div class="m-5 box is-inline-block" style="max-width: 20rem;">

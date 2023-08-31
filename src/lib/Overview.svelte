@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Stats from "./Stats.svelte";
-    import Settings from "./Settings.svelte";
+    import Stats from "./Cards/Stats.svelte";
+    import Settings from "./Cards/Settings.svelte";
 </script>
 
 <div>

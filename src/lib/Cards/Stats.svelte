@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Workouts } from "../stores/stores";
+    import { Workouts } from "../../stores/stores";
 
     let totalWorkouts = 0;
     let totalQuestions = 0;
