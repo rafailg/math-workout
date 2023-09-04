@@ -1,4 +1,5 @@
 import {evaluate} from "mathjs"
+import type { Settings } from "./Settings"
 
 export class Question{
     constructor (public Description:string, public Answer: number){}
@@ -6,8 +7,8 @@ export class Question{
     public CompletedIn: number
 }
 
-export function CreateQuestion(operationCount: number, numberSize:number): Question{
-    let description = GetOperationString(operationCount, numberSize)
+export function CreateQuestion(settings: Settings): Question{
+    let description = GetOperationString(settings.OperationCount, settings.MaxNumberSize)
     let answer = GetOperationAnswer(description)
     let question = new Question(description, answer)
     return question
