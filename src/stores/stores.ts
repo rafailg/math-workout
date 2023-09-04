@@ -13,3 +13,9 @@ export const AmountOfNumbers = writable<number>(2)
 export const NumberLength = writable<number>(1)
 
 export const AmountOfQuestions = writable<number>(10)
+
+export const UsePlus = writable<boolean>(true)
+
+export const UseMinus = writable<boolean>(true)
+
+export const UseMultiply = writable<boolean>(true)
