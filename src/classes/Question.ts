@@ -8,20 +8,20 @@ export class Question{
 }
 
 export function CreateQuestion(settings: Settings): Question{
-    let description = GetOperationString(settings.OperationCount, settings.MaxNumberSize)
+    let description = GetOperationString(settings)
     let answer = GetOperationAnswer(description)
     let question = new Question(description, answer)
     return question
 }
 
-function GetOperationString(operationCount:number, maxDigits:number): string{
+function GetOperationString(settings: Settings): string{
     var characters: string[] = []
 
-    for(let i = 0; i < operationCount; i++){
-        var digits = Math.ceil(Math.random() * maxDigits) 
+    for(let i = 0; i < settings.OperationCount; i++){
+        var digits = Math.ceil(Math.random() * settings.MaxNumberSize) 
         characters.push(GetRandomNumber(digits).toString())
-        if(i != operationCount - 1){
-            characters.push(GetRandomOperator())
+        if(i != settings.OperationCount - 1){
+            characters.push(GetRandomOperator(settings))
         }
     }
     return characters.join(" ")
@@ -31,8 +31,17 @@ function GetOperationAnswer(operation: string): number{
     return parseInt(evaluate(operation)) 
 }
 
-function GetRandomOperator(){
-    return ['+','-'][Math.floor(Math.random()*2)]
+function GetRandomOperator(settings: Settings): string{
+    let operators = GetAvailableOperators(settings)
+    return operators[Math.floor(Math.random()*operators.length)]
+}
+
+function GetAvailableOperators(settings: Settings): string[]{
+    let operators = []
+    if(settings.UsePlus){operators.push('+')}
+    if(settings.UseMinus){operators.push('-')}
+    if(settings.UseMultiply){operators.push('*')}
+    return operators
 }
 
 //Replace operator characters
