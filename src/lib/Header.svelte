@@ -9,7 +9,7 @@
 <nav class="navbar" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item brand-name">
-            Math Workout ➗
+            Math Training ✅
         </div>
     </div>
 
@@ -19,7 +19,7 @@
                 {#if $CurrentWorkout}
                     <button on:click={toMainScreen} class="button 
                     {$CurrentWorkout.Completed?"is-primary":"is-danger"}">
-                        {$CurrentWorkout.Completed?"Continue":"Cancel workout"}
+                        {$CurrentWorkout.Completed?"Continue":"Cancel"}
                     </button>
                 {:else}
                     <button on:click={StartNewWorkout} class="button is-primary">Start new workout</button>
