@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
-import { Workout } from "../classes/Workout";
-import { Question } from "../classes/Question";
+import { Workout } from "./classes/Workout";
+import { Question } from "./classes/Question";
 
 export const Workouts = writable<Workout[]>([])
 

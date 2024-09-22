@@ -1,5 +1,5 @@
 <script lang="ts">
-import { AmountOfQuestions, AmountOfNumbers, NumberLength, UseMultiply, UsePlus, UseMinus } from "../../stores/stores";
+import { AmountOfQuestions, AmountOfNumbers, NumberLength, UseMultiply, UsePlus, UseMinus } from "../../stores";
 
 </script>
 

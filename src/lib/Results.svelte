@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { CurrentWorkout } from "../stores/stores";
+    import { CurrentWorkout } from "../stores";
 </script>
 
 <div>

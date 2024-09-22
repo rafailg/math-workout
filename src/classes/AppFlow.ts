@@ -1,5 +1,5 @@
 import { Workout, CreateWorkout } from "./Workout";
-import { CurrentWorkout, AmountOfNumbers, AmountOfQuestions, NumberLength, UsePlus, UseMinus, UseMultiply } from "../stores/stores";
+import { CurrentWorkout, AmountOfNumbers, AmountOfQuestions, NumberLength, UsePlus, UseMinus, UseMultiply } from "../stores";
 import { Settings } from "./Settings";
 let amountOfQuestions = 10;
 let amountOfNumbers = 1;

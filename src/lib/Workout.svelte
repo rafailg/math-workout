@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { CurrentWorkout, Workouts } from "../stores/stores";
+    import { CurrentWorkout, Workouts } from "../stores";
     import { Workout } from "../classes/Workout";
     import QuestionComponent from "./Question.svelte";
     let workout: Workout;
