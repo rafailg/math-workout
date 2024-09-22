@@ -4,10 +4,10 @@ import Overview from "./lib/Overview.svelte";
 import {CurrentWorkout} from './stores'
 import Workout from "./lib/Workout.svelte";
 import Results from "./lib/Results.svelte";
+
 </script>
 
 <main>
-
 <Header></Header>
 {#if $CurrentWorkout?.Completed}
     <Results></Results>
@@ -16,7 +16,6 @@ import Results from "./lib/Results.svelte";
 {:else}
     <Overview></Overview>
 {/if}
-
 </main>
 
 <style>  
